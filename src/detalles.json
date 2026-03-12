@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "titulo": "Avatar: Fuego y Cenizas",
+    "imagen": "https://lumiere-a.akamaihd.net/v1/images/baja_integrado_vert_payoff_avatar_3_788f92d9.jpeg",
+    "descripcion": "Jake Sully y Neytiri deben proteger a su familia de una nueva amenaza.",
+    "categoria": "home"
+  },
+  {
+    "id": 2,
+    "titulo": "¡Ayuda!",
+    "imagen": "https://www.citicinemas.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fciticinemas-store%2FMovie-2213%2Fposter%2FmWsCxTQqRGBL%2F%C2%A1AYUDA.jpg&w=1920&q=75",
+    "descripcion": "Una comedia sobre las locuras de la amistad y la vida cotidiana.",
+    "categoria": "home"
+  },
+  {
+    "id": 3,
+    "titulo": "Arco",
+    "imagen": "https://www.aceprensa.com/wp-content/uploads/2026/01/arco-488017670-large.jpg",
+    "descripcion": "Un thriller psicológico que abarca sobre las decisiones y consecuencias de una acción.",
+    "categoria": "home"
+  },
+  {
+    "id": 4,
+    "titulo": "Five Nights at Freddy's: La Película",
+    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvD90Ei0cj57i7ekftszx6fpXoW2A2JIwU5Q&s",
+    "descripcion": "Un guardia nocturno se enfrenta a los animatronicos en una pizzeria abandonada.",
+    "categoria": "home"
+  },
+  {
+    "id": 5,
+    "titulo": "Chainsaw Man: La Película",
+    "imagen": "https://m.media-amazon.com/images/M/MV5BMDdjZTI0N2MtOTU5Zi00ZDgxLWEzMTktN2VmODc3NWM4N2IzXkEyXkFqcGc@._V1_.jpg",
+    "descripcion": "Denji se enfrenta a nuevos demonios.",
+    "categoria": "cartelera"
+  },
+  {
+    "id": 6,
+    "titulo": "Bob Esponja: En Busca de los Pantalones Cuadrados",
+    "imagen": "https://dx35vtwkllhj9.cloudfront.net/paramountpictures/the-spongebob-movie-search-for-squarepants-intl/images/regions/mx/updates1/onesheet.jpg",
+    "descripcion": "Bob y Patricio abarcan en una aventura épica.",
+    "categoria": "cartelera"
+  },
+  {
+    "id": 7,
+    "titulo": "Una película de Minecraft",
+    "imagen": "https://m.media-amazon.com/images/M/MV5BMGJjMDZiNzYtOWNjNS00MmYwLTg4NjAtYTJmYjZmODBlMzYzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "descripcion": "Un grupo es teletransportado a través de un portal y conocen a Steve.",
+    "categoria": "cartelera"
+  },
+  {
+    "id": 8,
+    "titulo": "Spider-Man: Into the Spiderverse",
+    "imagen": "https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_.jpg",
+    "descripcion": "Miles se convierte en el nuevo Spider-Man y conoce a Spider-Mans de otros universos alternos.",
+    "categoria": "cartelera"
+  },
+  {
+    "id": 9,
+    "titulo": "El Viaje de Chichiro",
+    "imagen": "https://images.cdn1.buscalibre.com/fit-in/360x360/5b/9f/5b9f80d36b5a809ec151c296a85db20f.jpg",
+    "descripcion": "Una nila queda trapada en un mundo mágico de espiritus.",
+    "categoria": "cartelera"
+  },
+  {
+    "id": 10,
+    "titulo": "GOAT: La cabra que cambió el juego",
+    "imagen": "https://m.media-amazon.com/images/M/MV5BYzE5OTJkOGMtYWFiNi00NTlkLWE3ZWItY2ZlNjkyOWVhMjMyXkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
+    "descripcion": "Una cabra con sueños grandes se inscribe a un grupo de basquetbol.",
+    "categoria": "cartelera"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "id": 101,
+    "titulo": "Inception",
+    "imagen": "https://m.media-amazon.com/images/I/91RAyiEIHNL._AC_UF894,1000_QL80_.jpg",
+    "año": 2010,
+    "genero": "Ciencia Ficción"
+  },
+  {
+    "id": 102,
+    "titulo": "Interstellar",
+    "imagen": "https://m.media-amazon.com/images/I/91obuWzA3XL._AC_UF894,1000_QL80_.jpg",
+    "año": 2014,
+    "genero": "Aventura"
+  },
+  {
+    "id": 103,
+    "titulo": "The Dark Knight",
+    "imagen": "https://www.originalfilmart.com/cdn/shop/files/DarkKnight_2008_fr_teaser_original_film_art_5000x.webp?v=1682983733",
+    "año": 2008,
+    "genero": "Acción"
+  }
+]
