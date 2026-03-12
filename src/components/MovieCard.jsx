@@ -1,10 +1,16 @@
-// importamos el botón reutilizable
 import React, { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import Button from "./Button"
 
-function MovieCard({ title, image, onVerDetalle, onFavorito, esFavorito, descripcion }) {
-  // Estado para mostrar/ocultar descripción
+function MovieCard({ id, title, image, onFavorito, esFavorito, descripcion }) {
+
+  const navigate = useNavigate()
+
   const [mostrarDescripcion, setMostrarDescripcion] = useState(false)
+
+  const verDetalle = () => {
+    navigate(`/pelicula/${id}`)
+  }
 
   return (
     <div
@@ -15,18 +21,16 @@ function MovieCard({ title, image, onVerDetalle, onFavorito, esFavorito, descrip
         boxShadow: "0 2px 6px rgba(0,0,0,0.1)"
       }}
     >
-      {/* Imagén de la película */}
       <img
-        src={image}  
+        src={image}
         alt={title}
         style={{
           width: "100%",
           height: "300px",
-          objectFit: "cover" // Mantiene proporción sin deofrmarse
-        }} 
+          objectFit: "cover"
+        }}
       />
 
-      {/* Contenido de la tarjeta */}
       <div
         style={{
           display: "flex",
@@ -46,17 +50,19 @@ function MovieCard({ title, image, onVerDetalle, onFavorito, esFavorito, descrip
             justifyContent: "center",
           }}
         >
-          {/* Botón 1: Ver detalle */}
-          <Button text="Ver detalle" onClick={onVerDetalle} />
+          {/* Botón detalle */}
+          <Button
+            text="Ver detalle"
+            onClick={verDetalle}
+          />
 
-          {/* Botón 2: Favoritos */}
+          {/* Botón favoritos */}
           <Button
             text={esFavorito ? "💔 Quitar favorito" : "❤️ Agregar favorito"}
             onClick={onFavorito}
           />
         </div>
 
-        {/* Botón 3: Ocultar/Mostrar detalle */}
         <Button
           text={mostrarDescripcion ? "Ocultar descripción" : "Mostrar descripción"}
           onClick={() => setMostrarDescripcion(!mostrarDescripcion)}

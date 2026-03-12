@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-function PelículasSugeridas({ verDetalle, toggleFavorito, favoritos }) {
+function PelículasSugeridas({ toggleFavorito, favoritos }) {
+  const navigate = useNavigate()
   const [peliculas, setPeliculas] = useState([]);
   const [apiData, setApiData] = useState(null);
   const [isLoading, setIsLoading] = useState(true); // Estado para carga
@@ -93,7 +95,7 @@ function PelículasSugeridas({ verDetalle, toggleFavorito, favoritos }) {
                     <p>{peli.año} • {peli.genero}</p>
 
                     <button
-                      onClick={() => verDetalle(peli)}
+                      onClick={() => navigate(`/pelicula/${peli.id}`)}
                       style={{ margin: "5px", padding: "5px 10px" }}
                     >
                       Ver Detalle

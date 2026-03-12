@@ -2,7 +2,7 @@ import MovieCard from "../components/MovieCard"
 import PelículasSugeridas from "../components/PelículasSugeridas"  // Nuevo
 import peliculas from "../detalles.json" // Importamos los datos locales de películas
 
-function Home({ verDetalle, toggleFavorito, favoritos }) {
+function Home({ toggleFavorito, favoritos }) {
     const peliculasHome = peliculas.filter(p => p.categoria === "home")
     
   return (
@@ -20,10 +20,10 @@ function Home({ verDetalle, toggleFavorito, favoritos }) {
         {peliculasHome.map((pelicula) => (
           <MovieCard
             key={pelicula.id}
+            id={pelicula.id}
             title={pelicula.titulo}
             image={pelicula.imagen}
             descripcion={pelicula.descripcion}
-            onVerDetalle={() => verDetalle(pelicula)} // Envía la película seleccionada al detalle
             onFavorito={() => toggleFavorito(pelicula)}
             esFavorito={favoritos.some(p => p.id === pelicula.id)}
           />
@@ -32,7 +32,6 @@ function Home({ verDetalle, toggleFavorito, favoritos }) {
       
       {/* Sección de películas sugeridas */}
       <PelículasSugeridas
-        verDetalle={verDetalle}
         toggleFavorito={toggleFavorito}
         favoritos={favoritos}
       />

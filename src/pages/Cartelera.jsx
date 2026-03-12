@@ -1,7 +1,7 @@
 import MovieCard from "../components/MovieCard"
 import peliculas from "../detalles.json" // Importa el JSON con todas las películas
 
-function Cartelera({ verDetalle, toggleFavorito, favoritos }) {
+function Cartelera({ toggleFavorito, favoritos }) {
   // Si quisieras filtrar solo ciertas películas para la cartelera, podrías hacerlo así:
   // const peliculasCartelera = peliculas.filter(p => p.enCartelera === true)
   // Por ahora mostramos todas las del JSON:
@@ -21,10 +21,10 @@ function Cartelera({ verDetalle, toggleFavorito, favoritos }) {
       {peliculasCartelera.map((pelicula) => (
         <MovieCard
           key={pelicula.id}
+          id={pelicula.id}
           title={pelicula.titulo}
           image={pelicula.imagen}
           descripcion={pelicula.descripcion}
-          onVerDetalle={() => verDetalle(pelicula)} // Envía la película seleccionada
           onFavorito={() => toggleFavorito(pelicula)}
           esFavorito={favoritos.some(p => p.id === pelicula.id)}
         />

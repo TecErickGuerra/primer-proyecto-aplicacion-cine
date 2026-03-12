@@ -1,4 +1,17 @@
-function Header({ cambiarVista }) {
+import { NavLink } from "react-router-dom"
+
+function Header() {
+    const linkStyle = {
+        textDecoration: "none",
+        cursor: "pointer",
+        fontWeight: "500"
+    }
+
+    const activeStyle = {
+        fontWeight: "bold",
+        borderBottom: "2px solid black"
+    }
+
     return (
         <header
             style={{
@@ -19,40 +32,47 @@ function Header({ cambiarVista }) {
             >
                 <h1 style={{ margin: 0 }}>CinePrueba</h1>
 
-                <nav 
+                <nav
                     style={{
                         display: "flex",
                         gap: "24px"
                     }}
                 >
-                    <span
-                        style={{ cursor: "pointer" }}
-                        onClick={() => cambiarVista("home")}
+                    <NavLink
+                        to="/"
+                        style={({ isActive }) =>
+                            isActive ? { ...linkStyle, ...activeStyle } : linkStyle
+                        }
                     >
                         Inicio
-                    </span>
+                    </NavLink>
 
-                    <span
-                        style={{ cursor: "pointer" }}
-                        onClick={() => cambiarVista("cartelera")}
+                    <NavLink
+                        to="/cartelera"
+                        style={({ isActive }) =>
+                            isActive ? { ...linkStyle, ...activeStyle } : linkStyle
+                        }
                     >
                         Cartelera
-                    </span>
+                    </NavLink>
 
-                    <span
-                        style={{ cursor: "pointer" }}
-                        onClick={() => cambiarVista("alimentos")}
+                    <NavLink
+                        to="/alimentos"
+                        style={({ isActive }) =>
+                            isActive ? { ...linkStyle, ...activeStyle } : linkStyle
+                        }
                     >
                         Alimentos
-                    </span>
+                    </NavLink>
 
-                    {/* NUEVO: Enlace a Otros */}
-                    <span
-                        style={{ cursor: "pointer" }}
-                        onClick={() => cambiarVista("otros")}
+                    <NavLink
+                        to="/otros"
+                        style={({ isActive }) =>
+                            isActive ? { ...linkStyle, ...activeStyle } : linkStyle
+                        }
                     >
                         Otros
-                    </span>
+                    </NavLink>
                 </nav>
             </div>
         </header>
