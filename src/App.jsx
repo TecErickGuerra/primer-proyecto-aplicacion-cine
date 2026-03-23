@@ -7,6 +7,7 @@ import Cartelera from "./pages/Cartelera"
 import Detalle from "./pages/Detalle"
 import Alimentos from "./pages/Alimentos"
 import Otros from "./pages/Otros"
+import Footer from "./components/Footer"
 
 function App() {
 
@@ -47,12 +48,13 @@ function App() {
 
         <Route path="/alimentos" element={<Alimentos />} />
         <Route path="/otros" element={<Otros />} />
-
         <Route path="/pelicula/:id" element={<Detalle />} />
 
         {/* Ruta 404 */}
         <Route path="*" element={<h2 style={{textAlign:"center"}}>Página no encontrada</h2>} />
       </Routes>
+      
+      <Footer />
 
     </div>
   )
