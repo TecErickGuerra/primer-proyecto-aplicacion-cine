@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import sugeridas from "../data/sugeridas.json";
 
 function PelículasSugeridas({ toggleFavorito, favoritos }) {
   const navigate = useNavigate()
@@ -9,7 +10,7 @@ function PelículasSugeridas({ toggleFavorito, favoritos }) {
 
   useEffect(() => {
     Promise.all([
-        fetch("/sugeridas.json").then((res) => res.json()),
+        Promise.resolve(sugeridas),
         fetch("https://jsonplaceholder.typicode.com/todos/1").then((res) =>
         res.json()
         ),

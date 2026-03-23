@@ -1,8 +1,7 @@
 import { useState } from "react"
 import { useParams, useNavigate } from "react-router-dom"
-import detalles from "../detalles.json"
-import peliculas from "../detalles.json"
-import sugeridas from "../../public/sugeridas.json"
+import peliculas from "../data/detalles.json"
+import sugeridas from "../data/sugeridas.json"
 
 function Detalle() {
   const { id } = useParams()

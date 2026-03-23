@@ -1,5 +1,5 @@
 import MovieCard from "../components/MovieCard"
-import peliculas from "../detalles.json" // Importa el JSON con todas las películas
+import peliculas from "../data/detalles.json" // Importa el JSON con todas las películas
 
 function Cartelera({ toggleFavorito, favoritos }) {
   // Si quisieras filtrar solo ciertas películas para la cartelera, podrías hacerlo así:

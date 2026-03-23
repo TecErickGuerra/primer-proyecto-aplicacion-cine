@@ -1,6 +1,6 @@
 import MovieCard from "../components/MovieCard"
 import PelículasSugeridas from "../components/PelículasSugeridas"  // Nuevo
-import peliculas from "../detalles.json" // Importamos los datos locales de películas
+import peliculas from "../data/detalles.json" // Importamos los datos locales de películas
 import MovieCarousel from "../components/MovieCarousel";
 
 function Home({ toggleFavorito, favoritos }) {
