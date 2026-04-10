@@ -6,7 +6,7 @@ import "swiper/css/navigation"
 
 import MovieCard from "./MovieCard"
 
-function MovieCarousel({ movies }) {
+function MovieCarousel({ movies, toggleFavorito, favoritos }) {
     return (
         <Swiper
             modules={[Navigation]}
@@ -17,8 +17,12 @@ function MovieCarousel({ movies }) {
             {movies.map(movie => (
                 <SwiperSlide key={movie.id}>
                     <MovieCard
-                        title={movie.título}
+                        id={movie.id}
+                        title={movie.titulo}
                         image={movie.imagen}
+                        descripcion={movie.descripcion}
+                        onFavorito={() => toggleFavorito(movie)}
+                        esFavorito={favoritos.some(f => f.id === movie.id)}
                     />
                 </SwiperSlide>
             ))}

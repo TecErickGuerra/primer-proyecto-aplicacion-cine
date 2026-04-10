@@ -16,7 +16,7 @@ function Home({ toggleFavorito, favoritos }) {
         }}
       >
         <h2>ESTRENOS</h2>
-        <MovieCarousel movies={peliculas}/>
+        <MovieCarousel movies={peliculas} toggleFavorito={toggleFavorito} favoritos={favoritos} />
       </section>
 
       <main

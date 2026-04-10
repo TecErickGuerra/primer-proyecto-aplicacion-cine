@@ -1,76 +1,23 @@
 import { NavLink } from "react-router-dom"
+import "../styles/Header.css"
 
 function Header() {
-    const linkStyle = {
-        textDecoration: "none",
-        cursor: "pointer",
-        fontWeight: "500"
-    }
-
-    const activeStyle = {
-        fontWeight: "bold",
-        borderBottom: "2px solid black"
-    }
-
     return (
-        <header
-            style={{
-                width: "100%",
-                boxSizing: "border-box",
-                backgroundColor: "#c9f5ea"
-            }}
-        >
-            <div
-                style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    padding: "16px 24px",
-                    maxWidth: "1400px",
-                    margin: "0 auto"
-                }}
-            >
-                <h1 style={{ margin: 0 }}>CinePrueba</h1>
+        <header className="site-header">
+            <div className="header-inner">
+                <h1 className="site-title">CinePrueba</h1>
 
-                <nav
-                    style={{
-                        display: "flex",
-                        gap: "24px"
-                    }}
-                >
-                    <NavLink
-                        to="/"
-                        style={({ isActive }) =>
-                            isActive ? { ...linkStyle, ...activeStyle } : linkStyle
-                        }
-                    >
+                <nav className="site-nav">
+                    <NavLink to="/" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
                         Inicio
                     </NavLink>
-
-                    <NavLink
-                        to="/cartelera"
-                        style={({ isActive }) =>
-                            isActive ? { ...linkStyle, ...activeStyle } : linkStyle
-                        }
-                    >
+                    <NavLink to="/cartelera" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
                         Cartelera
                     </NavLink>
-
-                    <NavLink
-                        to="/alimentos"
-                        style={({ isActive }) =>
-                            isActive ? { ...linkStyle, ...activeStyle } : linkStyle
-                        }
-                    >
+                    <NavLink to="/alimentos" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
                         Alimentos
                     </NavLink>
-
-                    <NavLink
-                        to="/otros"
-                        style={({ isActive }) =>
-                            isActive ? { ...linkStyle, ...activeStyle } : linkStyle
-                        }
-                    >
+                    <NavLink to="/otros" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
                         Otros
                     </NavLink>
                 </nav>
